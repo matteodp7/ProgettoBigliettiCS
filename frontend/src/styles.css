@@ -1,0 +1,87 @@
+/* Import di Bootstrap */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+/* Angular Forms - Validazione */
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-touched.ng-invalid:not(form) {
+  border-left: 5px solid #a94442; /* red */
+}
+
+/* Fai sì che lo sfondo si estenda a tutta la pagina */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-size: 500% 500%;/* <-- IMPORTANTE */
+  background: transparent;
+}
+
+/* Applica il font a tutto il sito */
+body {
+  font-family: 'Bebas Neue', sans-serif; /* Usa il font Bebas Neue */
+  font-size: 16px; /* Imposta una dimensione di base per il testo */
+  line-height: 1.5; /* Imposta l'altezza della linea per una lettura migliore */
+  margin: 0; /* Rimuove i margini predefiniti */
+  padding: 0; /* Rimuove il padding predefinito */
+  color: #333; /* Imposta il colore del testo */
+}
+
+/* Se vuoi che tutto il testo (compreso i titoli) abbia lo stesso font */
+h1, h2, h3, h4, h5, h6, p, a, span {
+  font-family: 'Bebas Neue', sans-serif;
+  color: inherit; /* Mantieni il colore di testo ereditato */
+}
+
+
+/* app-root deve estendersi per tutta l'altezza */
+app-root {
+  display: block;
+  min-height: 100%;              /* <-- IMPORTANTE */
+}
+
+/* Imposta un colore per tutti gli elementi */
+* {
+  color: lawngreen;
+}
+
+/* Contenitore di contenuti */
+.fullscreen-content {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.fullscreen-content{
+  min-height: 100%;
+  padding-bottom: 20px;
+}
+
+:host {
+  display: block;
+  min-height: 100%;
+  background: linear-gradient(to right, #ff3030 50%, #4040ff 50%);
+}
+
+html, body, app-root {
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+app-root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main, .content, router-outlet + * {
+  margin-top: 80px; /* Imposta un margine pari all'altezza della navbar */
+}
+

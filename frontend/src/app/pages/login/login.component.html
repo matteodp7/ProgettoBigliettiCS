@@ -1,0 +1,63 @@
+<h1 align="center" class="display-4 mb-5">Accedi</h1>
+<div style="width:40%; margin: 25px auto">
+
+    <div class="alert alert-danger" *ngIf="isInvalid">
+        Username e password non valide!
+    </div>
+    <div class="alert alert-info" *ngIf="isLogout">
+        Sei stato disconnesso dal tuo account!
+    </div>
+
+
+    <form #form='ngForm' (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Indirizzo Email</label>
+            <input type="text" class="form-control form-control-lg" id="email" name="email" placeholder="Email"
+                   required autofocus [(ngModel)]="model.username" #email="ngModel" autocomplete="email" >
+            <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+                Inserire l'email!
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control form-control-lg" id="password" name="password"  autocomplete="password"
+                   placeholder="Password" required [(ngModel)]="model.password" #password='ngModel'>
+            <div [hidden]="password.valid || password.pristine" class="alert alert-danger">
+                Inserire l'email!
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div>
+                <input type="checkbox" id="remember_me" name="remember-me" [(ngModel)]="model.remembered">
+                <label for="remember_me" class="inline">Ricorda?</label>
+                <a class="float-right" routerLink="/register">Registrati</a>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button [disabled]="!form.form.valid" type="submit" class="btn btn-lg btn-primary btn-block">Accedi</button>
+        </div>
+    </form>
+
+
+    <strong>Utenti d'esempio</strong>
+    <table style="width: 100%;" id="sampleLoginTable">
+        <tr>
+            <td><a
+                    (click)="fillLoginFields('cliente001@gmail.com','123')"
+                    href="javascript:void(0)">cliente1</a></td>
+            <td><a
+                    (click)="fillLoginFields('cliente002@gmail.com','123')"
+                    href="javascript:void(0)">cliente2</a></td>
+            <td><a
+                    (click)="fillLoginFields('storecs@gmail.com','123')"
+                    href="javascript:void(0)">Cs-Store</a></td>
+            <td><a
+                    (click)="fillLoginFields('cosenzacalcio@gmail.com','123')"
+                    href="javascript:void(0)">Cs-Sede</a></td>
+        </tr>
+    </table>
+
+</div>

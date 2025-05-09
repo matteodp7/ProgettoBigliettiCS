@@ -1,0 +1,15 @@
+
+.title, h1 {
+  margin-top: 80px;  /* Stessa altezza della navbar */
+}
+
+.text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #ff3030 50%, #4040ff 50%);
+  -webkit-background-clip: text;  /* Per i browser Webkit (Chrome, Safari) */
+  background-clip: text;          /* Per Firefox */
+  color: transparent;             /* Imposta il colore del testo come trasparente per far vedere il gradiente */
+  display: inline;                /* Imposta il testo come inline per far sì che prenda il gradiente */
+}

@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid">
+<a class="navbar-brand brand-font" [routerLink]="root">
+        <img src="/assets/brand.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Biglietti Cosenza Calcio
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+        <div class="navbar-nav" *ngIf="!currentUser || currentUser.role == Role.Customer">
+
+            <a class="nav-item nav-link category-font"
+               routerLink="/category/0">
+                Curva Sud "Bergamini"
+            </a>
+            <a class="nav-item nav-link category-font"
+               routerLink="/category/1">
+                Curva Nord "Catena"
+            </a>
+            <a class="nav-item nav-link category-font"
+               routerLink="/category/2">
+                Tribuna A
+            </a>
+            <a class="nav-item nav-link category-font"
+               routerLink="/category/3">
+                Tribuna B
+            </a>
+
+            <a class="nav-item nav-link category-font"
+               routerLink="/category/4">
+              Tribuna "Rao"
+            </a>
+            <a class="nav-item nav-link category-font"
+              routerLink="/category/5">
+              Tribuna Centrale
+            </a>
+
+        </div>
+
+        <div class="navbar-nav ml-auto">
+            <a *ngIf="!currentUser || currentUser.role == Role.Customer"
+               class="nav-item nav-link category-font" routerLink="/cart">
+              <i class="fas fa-shopping-cart"></i>
+              Carrello
+            </a>
+
+            <ng-container *ngIf="currentUser; else noUser">
+                <a class="nav-item nav-link category-font" routerLink="/order">
+                    <i class="fas fa-list-ul"></i>
+                    Ordini
+                </a>
+                <a class="nav-item nav-link category-font" routerLink="/profile">
+                    {{name}}
+                </a>
+                <a class="nav-item nav-link category-font" (click)="logout()" routerLink="/login" [queryParams]="{logout: true}">
+                    Esci dall'account
+                </a>
+            </ng-container>
+            <ng-template #noUser>
+                <a class="nav-item nav-link category-font" routerLink="/login">
+                    Accedi
+                </a>
+                <a class="nav-item nav-link category-font" routerLink="/register">
+                    Registrati
+                </a>
+            </ng-template>
+        </div>
+    </div>
+</nav>
