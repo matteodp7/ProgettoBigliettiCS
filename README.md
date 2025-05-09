@@ -4,6 +4,8 @@
 This is a Single Page Appliaction with client-side rendering. It includes backend and frontend two seperate projects on different branches.
 The frontend client makes API calls to the backend server when it is running.
 
+git remote add origin https://github.com/matteodp7/ProgettoBigliettiCSOK.git
+git push -u origin main
 
 
 
