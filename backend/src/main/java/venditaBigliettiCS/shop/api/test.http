@@ -96,12 +96,12 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-  "id": 2147483641,
-  "email": "customer1@email.com",
+  "id": "00001",
+  "email": "cliente001@email.com",
   "password": "1234",
-  "name": "customer1",
-  "phone": "6789",
-  "address": "3200 West Road",
+  "name": "cliente1",
+  "phone": "3394624856",
+  "address": "Via Riccardo Misasi, 5",
   "active": false,
   "role": "ROLE_CUSTOMER",
   "authorities": [
@@ -125,15 +125,15 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-  "productId": "B0002",
-  "productName": "Spring In Action",
-  "productPrice": 20.00,
-  "productStock": 195,
-  "productDescription": "Learn Spring",
-  "productIcon": "https://images-na.ssl-images-amazon.com/images/I/51gHy16h5TL._SX397_BO1,204,203,200_.jpg",
-  "productStatus": 1,
+  "productId": "CS-BR CVS0003",
+  "productName": "Cosenza - Brescia ",
+  "productPrice": 16.00,
+  "productStock": 5200,
+  "productDescription": "33° Giornata di Serie B",
+  "productIcon": "https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BRESCIA_67f63726894fd.png",
+  "productStatus": 0,
   "categoryType": 0,
-  "updateTime": "2019-01-05T03:43:29.047+0000"
+  "updateTime": "2025-04-10 19:42:02"
 }
 
 ###
@@ -145,14 +145,15 @@ Authorization: Bearer {{token}}
 
 
 {
-  "productId": "B0022",
-  "productName": "Spring In Action",
-  "productPrice": 20.00,
-  "productStock": 195,
-  "productDescription": "Learn Spring",
-  "productIcon": "https://images-na.ssl-images-amazon.com/images/I/51gHy16h5TL._SX397_BO1,204,203,200_.jpg",
+  "productId": "CS-BR CVS2003",
+  "productName": "Cosenza - Brescia ",
+  "productPrice": 16.00,
+  "productStock": 5200,
+  "productDescription": "33° Giornata di Serie B",
+  "productIcon": "https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BRESCIA_67f63726894fd.png",
   "productStatus": 0,
-  "categoryType": 1
+  "categoryType": 0,
+  "updateTime": "2025-04-10 19:42:02"
 }
 
 ###

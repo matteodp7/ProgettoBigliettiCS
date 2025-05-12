@@ -22,7 +22,7 @@ import java.util.Set;
 @NoArgsConstructor
 @DynamicUpdate
 public class OrderMain implements Serializable {
-    private static final long serialVersionUID = -3819883511505235030L;
+    private static final long serialVersionUID = -6657796854586830L;
 
     @Id
     @NotNull

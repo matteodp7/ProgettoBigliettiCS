@@ -25,7 +25,7 @@ public class JwtEntryPoint implements AuthenticationEntryPoint {
                          AuthenticationException e)
             throws IOException {
 
-        logger.error("Unauthorized error. Message - {}", e.getMessage());
+        logger.error("Errore di Autorizzazione - {}", e.getMessage());
         response.setStatus(HttpStatus.UNAUTHORIZED.value());
     }
 }

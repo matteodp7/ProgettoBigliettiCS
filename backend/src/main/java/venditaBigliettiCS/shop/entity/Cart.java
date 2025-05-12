@@ -33,9 +33,9 @@ public class Cart implements Serializable {
 
     @Override
     public String toString() {
-        return "Cart{" +
-                "cartId=" + cartId +
-                ", products=" + products +
+        return "Carrello{" +
+                "IdCarrello=" + cartId +
+                ", Biglietti=" + products +
                 '}';
     }
 

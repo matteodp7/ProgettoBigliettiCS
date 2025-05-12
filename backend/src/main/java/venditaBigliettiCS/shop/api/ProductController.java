@@ -36,12 +36,6 @@ public class ProductController {
     public ProductInfo showOne(@PathVariable("productId") String productId) {
 
         ProductInfo productInfo = productService.findOne(productId);
-
-//        // Biglietto non disponibile
-//        if (productInfo.getProductStatus().equals(ProductStatusEnum.DOWN.getCode())) {
-//            productInfo = null;
-//        }
-
         return productInfo;
     }
 
@@ -52,7 +46,7 @@ public class ProductController {
         if (productIdExists != null) {
             bindingResult
                     .rejectValue("productId", "error.product",
-                            "There is already a product with the code provided");
+                            "Esiste già un biglietto con questo codice");
         }
         if (bindingResult.hasErrors()) {
             return ResponseEntity.badRequest().body(bindingResult);

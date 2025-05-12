@@ -1,3 +1,3 @@
 export enum ProductStatus {
-    'Disponibilw', 'Non Disponibile'
+    'Disponibile', 'Non Disponibile'
 }

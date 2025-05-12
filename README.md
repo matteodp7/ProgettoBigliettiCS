@@ -1,12 +1,8 @@
 # Applicazione per la vendita di biglietti del Cosenza 
 
-#### A full-stack Online Shop web application using Spring Boot 2 and Angular 7. 
-This is a Single Page Appliaction with client-side rendering. It includes backend and frontend two seperate projects on different branches.
-The frontend client makes API calls to the backend server when it is running.
-
-
-## Screenshot
-![Screnshot](https://raw.githubusercontent.com/matteodp7/ProgettoBigliettiCS/refs/heads/main/frontend/src/assets/screen.jpg)
+#### Un applicazione web per la vendita dei biglietti del Cosenza che utilizza Angular 7 e Spring Boot 2.
+Si tratta di un'applicazione a pagina singola con rendering lato client, composta da un backend e un frontend gestiti come due progetti separati su branch distinti. 
+Il frontend effettua chiamate API al server backend durante la sua esecuzione.
 
 ## Funzionalità
 - API REST
@@ -53,3 +49,5 @@ Avviare il server backend prima del client frontend.
   3. Esegui `npm install`. 
   4. Il client frontend sarà disponibile su [localhost:4200]().
 
+## Screen di prova del carrello
+![Screnshot](https://raw.githubusercontent.com/matteodp7/ProgettoBigliettiCS/refs/heads/main/frontend/src/assets/screen.jpg)

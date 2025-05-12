@@ -31,8 +31,6 @@ public class JwtFilter extends OncePerRequestFilter {
             try {
                 String userAccount = jwtProvider.getUserAccount(jwt);
                 User user = userService.findOne(userAccount);
-                // pwd not necessary
-                // if jwt ok, then authenticate
                 SimpleGrantedAuthority sga = new SimpleGrantedAuthority(user.getRole());
                 ArrayList<SimpleGrantedAuthority> list = new ArrayList<>();
                 list.add(sga);
@@ -41,7 +39,7 @@ public class JwtFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(auth);
 
             } catch (Exception e) {
-                logger.error("Set Authentication from JWT failed");
+                logger.error("Setta il jwt token");
             }
         }
         filterChain.doFilter(httpServletRequest, httpServletResponse);

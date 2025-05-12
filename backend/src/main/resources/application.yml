@@ -1,4 +1,3 @@
-## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -10,7 +9,6 @@ spring:
     continue-on-error: true
   jpa:
     show-sql: true
-    #    generate-ddl: false
     hibernate:
       ddl-auto: create
     database: postgresql
@@ -19,15 +17,6 @@ spring:
         temp:
           use_jdbc_metadata_defaults: false;
     database-platform: org.hibernate.dialect.PostgreSQL9Dialect
-  #      dialect: org.hibernate.dialect.MySQL5Dialect
-
-  #  jackson:
-  #    default-property-inclusion: non_null
-  #  redis:
-  #    host: localhost
-  #    port: 6379
-  #  freemarker:
-  #      cache: false
 
 
 

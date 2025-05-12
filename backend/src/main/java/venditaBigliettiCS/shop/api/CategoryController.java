@@ -20,15 +20,6 @@ public class CategoryController {
     @Autowired
     ProductService productService;
 
-
-    /**
-     * Mostra i biglietti per settore
-     *
-     * @param categoryType
-     * @param page
-     * @param size
-     * @return
-     */
     @GetMapping("/category/{type}")
     public CategoryPage showOne(@PathVariable("type") Integer categoryType,
                                 @RequestParam(value = "page", defaultValue = "1") Integer page,
