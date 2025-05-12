@@ -36,7 +36,6 @@ export class UserDetailComponent implements OnInit {
         this.userService.update(this.user).subscribe(u => {
             this.userService.nameTerms.next(u.name);
             let url = '/';
-          // tslint:disable-next-line:triple-equals
             if (this.user.role != Role.Customer) {
                 url = '/seller';
             }

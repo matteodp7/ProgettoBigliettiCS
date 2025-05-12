@@ -6,27 +6,27 @@ Il frontend effettua chiamate API al server backend durante la sua esecuzione.
 
 ## Funzionalità
 - API REST
-- Autenticazione JWT 
-- Carrello degli acquisti basato su cookie per i visitatori
-- Carrello degli acquisti persistente per i clienti
+- Autenticazione JWT
 - Gestione del carello e degli ordini
+- Carrello degli acquisti persistente per i clienti
+- Carrello degli acquisti basato su cookie per i visitatori
 - Checkout
-- Catalogo
 - Paginazione
+- Catalogo
 ## Stack tecnologici
 **Backend**
-  - Java 11
-  - Spring Boot 2.2
+  - Java 11 
   - Spring Security
-  - Autenticazione JWT
+  - Spring Boot 2.2
   - Spring Data JPA
   - Hibernate
-  - PostgreSQL
+  - Autenticazione JWT
   - Maven
+  - PostgreSQL
 
 **Frontend**
-  - Angular 7
   - Angular CLI
+  - Angular 7
   - Bootstrap
 
 ## Come si esegue?

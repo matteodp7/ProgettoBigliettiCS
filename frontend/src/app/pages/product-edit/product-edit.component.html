@@ -1,7 +1,6 @@
 <h1 align="center" class="display-4 mb-5">Modifica Biglietto</h1>
 <div style="width:40%; margin: 25px auto">
     <form #form="ngForm" (ngSubmit)="onSubmit()">
-        <!--Id-->
         <div class="form-group">
             <label for="productId">Codice</label>
             <input [readOnly]="isEdit" [disabled]="isEdit" [(ngModel)]="product.productId" type="text"
@@ -13,19 +12,17 @@
                 </div>
             </div>
         </div>
-        <!--Photo-->
         <div class="form-group">
             <label>Link della foto</label>
             <input [(ngModel)]="product.productIcon" type="text" class="form-control form-control-lg" id="productIcon"
-                   name="productIcon" placeholder="Photo">
+                   name="productIcon" placeholder="Foto">
         </div>
 
-        <!--Name-->
         <div class="form-group">
             <label>Nome</label>
             <input [(ngModel)]="product.productName" type="text" class="form-control form-control-lg" id="productName"
                    #productName="ngModel"
-                   name="productName" placeholder="Name" required>
+                   name="productName" placeholder="Nome" required>
         </div>
         <div *ngIf="productName.invalid && (productName.dirty ||productName.touched)">
             <div *ngIf="productName.errors.required">
@@ -33,7 +30,6 @@
             </div>
         </div>
 
-        <!--Category-->
         <div class="form-group">
             <label for="categoryType">Settore</label>
             <select class="custom-select custom-select-lg " id="categoryType" name="categoryType"
@@ -44,18 +40,17 @@
                 <option [ngValue]=2>Tribuna A</option>
                 <option [ngValue]=3>Tribuna B</option>
                 <option [ngValue]=4>Tribuna "Rao"</option>
-                <option [ngValue]=5>Tribuna Vip</option>
+                <option [ngValue]=5>Tribuna Centrale</option>
+                <option [ngValue]=5>Trasferte </option>
             </select>
         </div>
 
-        <!--Description-->
         <div class="form-group">
             <label>Descrizione</label>
             <textarea class="form-control form-control-lg text-left"
                       id="productDescription" name="productDescription"
-                      placeholder="Description" [(ngModel)]="product.productDescription"></textarea>
+                      placeholder="Descrizione" [(ngModel)]="product.productDescription"></textarea>
         </div>
-        <!--Price-->
         <div class="form-group">
             <label for="productPrice">Prezzo</label>
             <input class="form-control form-control-lg"
@@ -71,8 +66,7 @@
                 </div>
             </div>
         </div>
-        <!--Stock-->
-        <div class="form-group">
++        <div class="form-group">
             <label for="productStock">Biglietti rimasti</label>
             <input class="form-control form-control-lg"
                    type="number"
@@ -87,7 +81,6 @@
                 </div>
             </div>
         </div>
-        <!--Status-->
         <div class="form-group">
             <label for="productStatus">Stato</label>
             <select class="custom-select custom-select-lg " id="productStatus" name="productStatus" required

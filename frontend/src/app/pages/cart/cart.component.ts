@@ -45,19 +45,12 @@ export class CartComponent implements OnInit, OnDestroy, AfterContentChecked {
         });
 
         this.sub = this.updateTerms.pipe(
-            // wait 300ms after each keystroke before considering the term
             debounceTime(300),
-            //
-            // ignore new term if same as previous term
-            // Same Object Reference, not working here
-            //  distinctUntilChanged((p: ProductInOrder, q: ProductInOrder) => p.count === q.count),
-            //
-            // switch to new search observable each time the term changes
             switchMap((productInOrder: ProductInOrder) => this.cartService.update(productInOrder))
         ).subscribe(prod => {
                 if (prod) { throw new Error(); }
             },
-            _ => console.log('Update Item Failed'));
+            _ => console.log('Aggiornamento biglietto fallito'));
     }
 
     ngOnDestroy() {
@@ -94,9 +87,9 @@ export class CartComponent implements OnInit, OnDestroy, AfterContentChecked {
         this.cartService.remove(productInOrder).subscribe(
             success => {
                this.productInOrders = this.productInOrders.filter(e => e.productId !== productInOrder.productId);
-                console.log('Cart: ' + this.productInOrders);
+                console.log('Carrello: ' + this.productInOrders);
             },
-            _ => console.log('Remove Cart Failed'));
+            _ => console.log('Rimozione Carrello non riuscita'));
     }
 
     checkout() {
@@ -110,7 +103,7 @@ export class CartComponent implements OnInit, OnDestroy, AfterContentChecked {
                     this.productInOrders = [];
                 },
                 error1 => {
-                    console.log('Checkout Cart Failed');
+                    console.log('Pagamento del carrello non riuscito');
                 });
             this.router.navigate(['/']);
         }

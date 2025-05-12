@@ -13,31 +13,26 @@
   color: #ff3030;
 }
 
-/* Titoli sportivi */
 h1, .display-4 {
   font-family: 'Bebas Neue', sans-serif;
 }
 
-/* Testo più leggibile */
 body, p, .card-text {
   font-family: 'Rajdhani', sans-serif;
 }
 
-/* Applica il font Bebas Neue e lo stile di base a tutti gli elementi .category-font */
 .category-font {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1rem;
   letter-spacing: 1px;
 }
 
-/* Colore rosso per gli elementi dispari */
 .category-font:nth-child(odd) {
-  color: #4040ff; /* Rosso */
+  color: #4040ff;
 }
 
-/* Colore blu per gli elementi pari */
 .category-font:nth-child(even) {
-  color: #ff3030; /* Blu */
+  color: #ff3030;
 }
 
 
@@ -57,14 +52,14 @@ body, p, .card-text {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #f2f2f2 !important; /* Grigio chiaro */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Leggera ombra */
-  border-top: 4px solid transparent; /* Bordo superiore trasparente */
-  border-bottom: 4px solid transparent; /* Bordo inferiore trasparente */
+  background-color: #f2f2f2 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
   background-image: linear-gradient(to right, #4040ff 50%, #ff3030 50%), linear-gradient(to right, #4040ff 50%, #ff3030 50%);
   background-size: 100% 4px;
-  background-position: top, bottom; /* Posiziona i gradienti al top e al bottom */
-  background-repeat: no-repeat; /* Non ripetere il gradiente */
+  background-position: top, bottom;
+  background-repeat: no-repeat;
 }
 
 .navbar:hover {
@@ -77,7 +72,7 @@ body, p, .card-text {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Assicurati che stia sopra agli altri elementi */
+  z-index: 1000;
 }
 
 

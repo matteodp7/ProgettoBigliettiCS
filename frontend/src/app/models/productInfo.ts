@@ -7,7 +7,7 @@ export class ProductInfo {
     productStock: number;
     productDescription: string;
     productIcon: string;
-    productStatus: number; // 0: onsale 1: offsale
+    productStatus: number; // 0: in vendita 1: non in vendita
     categoryType: number;
     createTime: string;
     updateTime: string;

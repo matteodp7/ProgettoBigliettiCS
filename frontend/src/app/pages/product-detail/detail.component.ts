@@ -27,18 +27,10 @@ export class DetailComponent implements OnInit {
 
   ngOnInit() {
     this.getProduct();
-    this.title = 'Product Detail';
+    this.title = 'Dettagli Biglietto';
     this.count = 1;
   }
 
-  // ngOnChanges(changes: SimpleChanges): void {
-  //   // Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-  //   // Add '${implements OnChanges}' to the class.
-  //   console.log(changes);
-  //   if (this.item.quantity in changes) {
-
-  //   }
-  // }
 
   getProduct(): void {
     const id = this.route.snapshot.paramMap.get('id');
@@ -46,7 +38,7 @@ export class DetailComponent implements OnInit {
         prod => {
           this.productInfo = prod;
         },
-        _ => console.log('Get Cart Failed')
+        _ => console.log('Caricammento Carrell0 fallito!')
     );
   }
 
@@ -56,17 +48,17 @@ export class DetailComponent implements OnInit {
         .subscribe(
             res => {
               if (!res) {
-                console.log('Add Cart failed' + res);
+                console.log('Aggiunta al carrello fallita!' + res);
                 throw new Error();
               }
               this.router.navigateByUrl('/cart');
             },
-            _ => console.log('Add Cart Failed')
+            _ => console.log('Aggiunta al carrello fallita!')
         );
   }
 
   validateCount() {
-    console.log('Validate');
+    console.log('Convalidato');
     const max = this.productInfo.productStock;
     if (this.count > max) {
       this.count = max;

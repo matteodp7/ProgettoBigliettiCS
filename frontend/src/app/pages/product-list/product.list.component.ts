@@ -50,7 +50,6 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
     getProds(page: number = 1, size: number = 5) {
         this.productService.getAllInPage(+page, +size)
-          // tslint:disable-next-line:no-shadowed-variable
             .subscribe(page => {
                 this.page = page;
             });
@@ -60,7 +59,6 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
     remove(productInfos: ProductInfo[], productInfo) {
         this.productService.delelte(productInfo).subscribe(_ => {
-            // tslint:disable-next-line:triple-equals
                 productInfos = productInfos.filter(e => e.productId != productInfo);
             },
             err => {

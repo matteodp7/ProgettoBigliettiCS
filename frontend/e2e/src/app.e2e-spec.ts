@@ -1,14 +1,14 @@
 import { AppPage } from './app.po';
 
-describe('workspace-project App', () => {
+describe('Spazio di lavoro', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('dovrebbe visualizzare il messaggio di benvenuto', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to shop!');
+    expect(page.getTitleText()).toEqual('Benevenuto!');
   });
 });

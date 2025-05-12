@@ -14,7 +14,6 @@
 }
 
 
-/* Estende lo sfondo a tutto il contenuto */
 html, body {
   margin: 0;
   padding: 0;
@@ -26,7 +25,6 @@ html, body {
 
 
 
-/* Contenitore del contenuto */
 .fullscreen-content {
   padding: 20px;
   position: relative;

@@ -43,7 +43,7 @@ INSERT INTO "public"."product_in_order" VALUES (0100008, 0,1, '36° Giornata di 
 -- ----------------------------
 -- Records of product_info
 -- ----------------------------
-INSERT INTO "public"."product_info" VALUES ('CS-BR CVS0003', 0, '2025-04-10 10:37:39', '33° Giornata di Serie B', 'https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BRESCIA_67f63726894fd.png', 'Cosenza - Brescia - CS ', 16.00, 0, 5200, '2025-04-10 19:42:02');
+INSERT INTO "public"."product_info" VALUES ('CS-BR CVS0003', 0, '2025-04-10 10:37:39', '33° Giornata di Serie B', 'https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BRESCIA_67f63726894fd.png', 'Cosenza - Brescia - CS', 16.00, 0, 5200, '2025-04-10 19:42:02');
 INSERT INTO "public"."product_info" VALUES ('CS-BR CVS0004', 0, '2025-04-10 12:12:46', '33° Giornata di Serie B', 'https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BRESCIA_67f63726894fd.png', 'Cosenza - Brescia - CS - LUPACCHIOTTO', 1.00, 0, 75, '2025-03-10 12:12:46');
 INSERT INTO "public"."product_info" VALUES ('CS-BA CVS0005', 0, '2025-04-10 06:51:03', '36° Giornata di Serie B', 'https://res.cloudinary.com/vivaticket/image/fetch/q_auto:eco,f_auto/https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BARI_6810dfe6274af.png', 'Cosenza - Bari - CS', 5.00, 0, 6100, '2025-04-10 12:04:13');
 INSERT INTO "public"."product_info" VALUES ('CS-BA CVS0006', 0, '2025-04-10 10:35:43', '36° Giornata di Serie B', 'https://res.cloudinary.com/vivaticket/image/fetch/q_auto:eco,f_auto/https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BARI_6810dfe6274af.png', 'Cosenza - Bari - CS - LUPACCHIOTTO', 1.00, 0, 105, '2025-04-10 10:35:43');
