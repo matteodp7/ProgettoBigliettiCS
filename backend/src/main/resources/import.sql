@@ -1,5 +1,6 @@
--- the order of values is related to the name of field.
--- Updating is necessary, if the name is changed
+
+-- L'ordine dei valori è correlato al nome del campo.
+-- L'aggiornamento è necessario se il nome viene modificato
 
 
 
@@ -13,10 +14,10 @@ INSERT INTO "public"."order_main" VALUES (0100007, 'Via Riccardo Misasi, 5', 'cl
 INSERT INTO "public"."order_main" VALUES (0100008, 'Via Riccardo Misasi, 5', 'cliente001@gmail.com', 'cliente1', '3394624856', '2025-03-15 13:01:06.943', 5.00, 1, '2025-03-15 13:02:56.498');
 
 -- ----------------------------
--- Table structure for product_category
+-- Struttura della tabella per Settori
 
 -- ----------------------------
--- Records of product_category
+--Dati dei Settori
 -- ----------------------------
 INSERT INTO "public"."product_category" VALUES (0, 'Curva Sud "Bergamini"', 0, '2025-03-24 16:03:26', '2025-03-24 16:15:27');
 INSERT INTO "public"."product_category" VALUES (1, 'Curva Nord "Catena"', 1, '2025-03-24 16:20:02', '2025-03-24 15:35:21');
@@ -28,7 +29,7 @@ INSERT INTO "public"."product_category" VALUES (6, 'Trasferte', 6, '2025-03-26 1
 
 
 -- ----------------------------
--- Records of product_in_order
+-- Dati dei Biglietti ordinati
 -- ----------------------------
 INSERT INTO "public"."product_in_order" VALUES (0100001, 0,1, '33° Giornata di Serie B', 'https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BRESCIA_67f63726894fd.png', 'CS-BR CVS0003', 'Cosenza - Brescia - CS', 16.00,5199,NULL, 0100001);
 INSERT INTO "public"."product_in_order" VALUES (0100002, 2,1, '33° Giornata di Serie B', 'https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BRESCIA_67f63726894fd.png', 'CS-BR TA0003', 'Cosenza - Brescia - TA', 22.00,3199,NULL, 0100002);
@@ -41,7 +42,7 @@ INSERT INTO "public"."product_in_order" VALUES (0100008, 0,1, '36° Giornata di 
 
 
 -- ----------------------------
--- Records of product_info
+-- Dati dei Biglietti in vendita
 -- ----------------------------
 INSERT INTO "public"."product_info" VALUES ('CS-BR CVS0003', 0, '2025-04-10 10:37:39', '33° Giornata di Serie B', 'https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BRESCIA_67f63726894fd.png', 'Cosenza - Brescia - CS', 16.00, 0, 5200, '2025-04-10 19:42:02');
 INSERT INTO "public"."product_info" VALUES ('CS-BR CVS0004', 0, '2025-04-10 12:12:46', '33° Giornata di Serie B', 'https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BRESCIA_67f63726894fd.png', 'Cosenza - Brescia - CS - LUPACCHIOTTO', 1.00, 0, 75, '2025-03-10 12:12:46');
@@ -71,26 +72,26 @@ INSERT INTO "public"."product_info" VALUES ('CS-BA TR0006', 4, '2025-04-10 10:35
 INSERT INTO "public"."product_info" VALUES ('CS-BR TC0003', 5, '2025-04-10 10:37:39', '33° Giornata di Serie B', 'https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BRESCIA_67f63726894fd.png', 'Cosenza - Brescia - TC', 35.00, 0, 1200, '2025-04-10 19:42:02');
 INSERT INTO "public"."product_info" VALUES ('CS-BR TC0004', 5, '2025-04-10 12:12:46', '33° Giornata di Serie B', 'https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BRESCIA_67f63726894fd.png', 'Cosenza - Brescia - TC - LUPACCHIOTTO', 5.00, 0, 45, '2025-03-10 12:12:46');
 INSERT INTO "public"."product_info" VALUES ('CS-BA TC0005', 5, '2025-04-10 06:51:03', '36° Giornata di Serie B', 'https://res.cloudinary.com/vivaticket/image/fetch/q_auto:eco,f_auto/https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BARI_6810dfe6274af.png', 'Cosenza - Bari - TC', 30.00, 0, 1500, '2025-04-10 12:04:13');
-INSERT INTO "public"."product_info" VALUES ('CS-BA TC0006', 5, '2025-04-10 10:35:43', '36° Giornata di Serie B', 'https://res.cloudinary.com/vivaticket/image/fetch/q_auto:eco,f_auto/https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BARI_6810dfe6274af.png', 'Cosenza - Bari - TC - LUPACCHIOTTO', 1.00, 0, 50, '2025-04-10 10:35:43');
+INSERT INTO "public"."product_info" VALUES ('CS-BA TC0006', 5, '2025-04-10 10:35:43', '36° Giornata di Serie B', 'https://res.cloudinary.com/vivaticket/image/fetch/q_auto:eco,f_auto/https://backendcdn.vivaticket.it/img_eventi_new/COSENZA_BARI_6810dfe6274af.png', 'Cosenza - Bari - TC - LUPACCHIOTTO', 1.00, 1, 0, '2025-04-10 10:35:43');
 
 INSERT INTO "public"."product_info" VALUES ('SP-CS SO0007', 6, '2025-04-10 10:47:39', '34° Giornata di Serie B', 'https://res.cloudinary.com/vivaticket/image/fetch/q_auto:eco,f_auto/https://backendcdn.vivaticket.it/img_eventi_new/SPEZIA_COSENZA_2_67f930078eb29.png', 'Spezia - Cosenza -SO', 18.00, 0, 1500, '2025-04-10 19:42:02');
 INSERT INTO "public"."product_info" VALUES ('Su-CS SO0007', 6, '2025-04-10 10:54:39', '37° Giornata di Serie B', 'https://res.cloudinary.com/vivaticket/image/fetch/q_auto:eco,f_auto/https://backendcdn.vivaticket.it/img_eventi_new/SUDTIROL_COSENZA_2_680a411920b4c.png', 'Sudtirol - Cosenza -SO', 11.00, 0, 700, '2025-04-10 19:47:02');
 
 
 -- ----------------------------
--- Records of users
+-- Dati di utenti
 -- ----------------------------
-INSERT INTO "public"."users" VALUES (00001, 't', 'Via Riccardo Misasi, 5', 'cliente001@gmail.com', 'cliente1', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', '3394624856', 'ROLE_CUSTOMER');
-INSERT INTO "public"."users" VALUES (00002, 't', 'Via degli Stadi', 'cosenzacalcio@gmail.com', 'Cs-Sede', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', '0984235783', 'ROLE_MANAGER');
-INSERT INTO "public"."users" VALUES (00003, 't', 'Piazza Kennedy, 8 ', 'storecs@gmail.com', 'Cs-Store', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', '0984183594', 'ROLE_EMPLOYEE');
-INSERT INTO "public"."users" VALUES (00004, 't', 'Via Panebianco, 56', 'cliente002@gmail.com', 'cliente2', '$2a$10$0oho5eUbDqKrLH026A2YXuCGnpq07xJpuG/Qu.PYb1VCvi2VMXWNi', '3426517046', 'ROLE_CUSTOMER');
+INSERT INTO "public"."users" VALUES (200001, 't', 'Via Riccardo Misasi, 5', 'cliente001@gmail.com', 'cliente1', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', '3394624856', 'ROLE_CUSTOMER');
+INSERT INTO "public"."users" VALUES (200002, 't', 'Via degli Stadi', 'cosenzacalcio@gmail.com', 'Cs-Sede', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', '0984235783', 'ROLE_MANAGER');
+INSERT INTO "public"."users" VALUES (200003, 't', 'Piazza Kennedy, 8 ', 'storecs@gmail.com', 'Cs-Store', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', '0984183594', 'ROLE_EMPLOYEE');
+INSERT INTO "public"."users" VALUES (200004, 't', 'Via Panebianco, 56', 'cliente002@gmail.com', 'cliente2', '$2a$10$0oho5eUbDqKrLH026A2YXuCGnpq07xJpuG/Qu.PYb1VCvi2VMXWNi', '3426517046', 'ROLE_CUSTOMER');
 
 -- ----------------------------
--- Records of cart
+-- Dati dei carrelli
 -- ----------------------------
-INSERT INTO "public"."cart" VALUES (00001);
-INSERT INTO "public"."cart" VALUES (00002);
-INSERT INTO "public"."cart" VALUES (00003);
-INSERT INTO "public"."cart" VALUES (00004);
+INSERT INTO "public"."cart" VALUES (200001);
+INSERT INTO "public"."cart" VALUES (200002);
+INSERT INTO "public"."cart" VALUES (200003);
+INSERT INTO "public"."cart" VALUES (200004);
 
 

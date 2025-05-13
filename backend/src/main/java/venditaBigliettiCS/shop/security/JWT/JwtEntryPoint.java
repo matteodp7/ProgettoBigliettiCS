@@ -18,7 +18,6 @@ public class JwtEntryPoint implements AuthenticationEntryPoint {
 
     private static final Logger logger = LoggerFactory.getLogger(JwtEntryPoint.class);
 
-    // called if authentication failed
     @Override
     public void commence(HttpServletRequest request,
                          HttpServletResponse response,

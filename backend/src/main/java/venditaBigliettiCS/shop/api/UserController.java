@@ -35,7 +35,6 @@ public class UserController {
 
     @PostMapping("/login")
     public ResponseEntity<JwtResponse> login(@RequestBody LoginForm loginForm) {
-        // throws Exception if authentication failed
 
         try {
             Authentication authentication = authenticationManager.authenticate(

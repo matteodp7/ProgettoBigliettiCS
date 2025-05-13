@@ -64,9 +64,12 @@ public class ProductServiceImpl implements ProductService {
         if (productInfo == null) throw new MyException(ResultEnum.PRODUCT_NOT_EXIST);
 
         int update = productInfo.getProductStock() - amount;
-        if(update <= 0) throw new MyException(ResultEnum.PRODUCT_NOT_ENOUGH );
+        if(update < 0) throw new MyException(ResultEnum.PRODUCT_NOT_ENOUGH );
 
         productInfo.setProductStock(update);
+        if (update == 0) {
+            productInfo.setProductStatus(1); // 1 = Non Disponibile
+        }
         productInfoRepository.save(productInfo);
     }
 
@@ -80,7 +83,6 @@ public class ProductServiceImpl implements ProductService {
             throw new MyException(ResultEnum.PRODUCT_STATUS_ERROR);
         }
 
-        //更新
         productInfo.setProductStatus(ProductStatusEnum.DOWN.getCode());
         return productInfoRepository.save(productInfo);
     }
@@ -95,7 +97,6 @@ public class ProductServiceImpl implements ProductService {
             throw new MyException(ResultEnum.PRODUCT_STATUS_ERROR);
         }
 
-        //更新
         productInfo.setProductStatus(ProductStatusEnum.UP.getCode());
         return productInfoRepository.save(productInfo);
     }
@@ -103,7 +104,6 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public ProductInfo update(ProductInfo productInfo) {
 
-        // if null throw exception
         categoryService.findByCategoryType(productInfo.getCategoryType());
         if(productInfo.getProductStatus() > 1) {
             throw new MyException(ResultEnum.PRODUCT_STATUS_ERROR);
