@@ -7,3 +7,9 @@
 .title, h1 {
   margin-top: 80px;
 }
+
+button.btn.btn-warning {
+  background-color: lawngreen !important;
+  border-color: lawngreen !important;
+  color: black !important; /* testo leggibile su sfondo chiaro */
+}
